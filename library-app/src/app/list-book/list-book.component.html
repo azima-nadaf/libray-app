@@ -1,0 +1,20 @@
+<div>
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>Book Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Operations</th>
+        </tr>
+        <tr *ngFor="let item of collection">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.quantity}}</td>
+            <td><i (click)="delete(item.id)" class="fa fa-trash" id='icon' style="color: red;"></i>
+                <i routerLink="/update/{{item.id}}" class="fa fa-edit" id='icon' style="color:royalblue"></i>
+            </td>
+        </tr>
+    </table>
+</div>
